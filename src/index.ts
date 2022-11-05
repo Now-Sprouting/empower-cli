@@ -1,9 +1,9 @@
 #! /usr/bin/env node
-import { Command } from 'commander'
+// commander 通过 esmodule 方式导入并通过esbuild打包存在问题，暂时使用 cjs方式引入
+const program = require('commander')
+const createCommands = require('./core/create')
+const helpOptions = require('./core/help')
 import pkg from '../package.json'
-const program = new Command()
-import createCommands from './core/create'
-import helpOptions from './core/help'
 
 // 配置版本号信息
 program.version(pkg.version).usage('<command> [option]')
