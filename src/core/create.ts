@@ -1,5 +1,5 @@
 const program = require('commander')
-import { createProject } from './action'
+import { createProject, CreateProjectOption } from '../action/createProject'
 
 const createCommands = () => {
     // 创建文件命令
@@ -7,7 +7,7 @@ const createCommands = () => {
         .command('create <project-name>')
         .description('create a new project use template')
         .option('-f --force', 'if it exist, overwrite directory')
-        .action((name: string, options: any) => {
+        .action((name: string, options: CreateProjectOption) => {
             createProject(name, options)
         })
 }

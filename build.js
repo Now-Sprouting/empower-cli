@@ -41,13 +41,13 @@ const build = async function () {
     watch: !isProd && {
       onRebuild(error) {
         if (error) {
-          console.log(chalk.red(`watch build failed`))
+          console.log(chalk.red.bold(`🟥 Watch Build Failed`))
         } else {
-          console.log(chalk.green(`watch build succeeded`))
+          console.log(chalk.blue.bold(`🟦 Watch Build Succeeded`))
         }
       },
     },
   })
-  console.log(chalk.green('success build \r\n'))
+  console.log(chalk.green.bold('🟩 Success Build \r\n'))
 }
 build()

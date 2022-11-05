@@ -1,15 +1,15 @@
 {
-  "name": "dyi-cli-demo",
+  "name": "empower-cli",
   "version": "1.0.0",
-  "description": "dong.yi custom cli scaffold",
+  "description": "empower-cli",
   "scripts": {
     "dev": "cross-env NODE_ENV=development node build.js",
     "build": "cross-env NODE_ENV=production node build.js"
   },
   "bin": {
-    "empower-cli": "./lib/index.js"
+    "emp": "./lib/index.js"
   },
-  "author": "dong.yi",
+  "author": "empower",
   "license": "ISC",
   "devDependencies": {
     "@types/eslint": "^7.28.0",
@@ -27,12 +27,14 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^8.2.0",
-    "dyi-tool": "^1.0.0-beta.4",
+    "download-git-repo": "^3.0.2",
     "eslint": "^7.32.0",
     "figlet": "^1.5.2",
     "fs-extra": "^10.0.0",
     "inquirer": "^8.1.5",
+    "open": "^8.4.0",
     "ora": "5.4.1",
+    "shelljs": "^0.8.5",
     "util": "^0.12.4"
   }
 }
