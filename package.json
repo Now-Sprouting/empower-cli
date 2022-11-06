@@ -1,6 +1,6 @@
 {
   "name": "empower-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "empower-cli",
   "scripts": {
     "dev": "cross-env NODE_ENV=development node build.js",
@@ -9,6 +9,9 @@
   "bin": {
     "emp": "./lib/index.js"
   },
+  "files" : [
+    "lib"
+  ],
   "author": "empower",
   "license": "ISC",
   "devDependencies": {
