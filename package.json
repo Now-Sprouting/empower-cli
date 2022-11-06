@@ -9,7 +9,7 @@
   "bin": {
     "emp": "./lib/index.js"
   },
-  "files" : [
+  "files": [
     "lib"
   ],
   "author": "empower",
@@ -24,6 +24,7 @@
     "@typescript-eslint/parser": "^4.31.1",
     "cross-env": "^7.0.3",
     "esbuild": "^0.12.28",
+    "esbuild-copy-static-files": "^0.1.0",
     "glob": "^7.1.7",
     "typescript": "^4.4.3"
   },
@@ -31,6 +32,7 @@
     "chalk": "^4.1.2",
     "commander": "^8.2.0",
     "download-git-repo": "^3.0.2",
+    "ejs": "^3.1.8",
     "eslint": "^7.32.0",
     "figlet": "^1.5.2",
     "fs-extra": "^10.0.0",

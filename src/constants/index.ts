@@ -1,4 +1,4 @@
-import chalk from 'chalk'
+const chalk = require('chalk')
 
 export const TextColor = {
     'primary': chalk.hex('#5207dd').bold,

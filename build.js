@@ -5,6 +5,7 @@ const chalk = require('chalk')
 const fs = require('fs-extra')
 const isProd = process.env.NODE_ENV == 'production'
 const libPath = path.join(process.cwd(), 'lib')
+const copyStaticFiles = require('esbuild-copy-static-files')
 
 /** 假如lib文件夹已存在，则清空 */
 if (fs.existsSync(libPath)) {
@@ -38,6 +39,12 @@ const build = async function () {
     loader: {
       ".ts": 'ts'
     },
+    plugins: [
+      copyStaticFiles({
+        src: './src/template',
+        dest: './lib/template',
+      })
+    ],
     watch: !isProd && {
       onRebuild(error) {
         if (error) {

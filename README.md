@@ -29,9 +29,23 @@ $ emp --help
 ### create
 在当前目录下选择模板(`Vue`, `React`)创建项目,例如：
 ``` shell
-emp create demoProject
+$ emp create demoProject
 ```
 如果当前目录存在 `demoProject` 文件，可使用 `--force`强行覆盖。
 ``` shell
-emp create demoProject --force
+$ emp create demoProject --force
 ``` 
+
+### addpage 
+以固定模版创建组件（`vue` 或 `react`）,默认在 `src/page` 下创建 `.vue` 组件
+``` shell
+$ emp addpage Home
+```
+可指定模版类型，如
+``` shell
+$ emp addpage Home --type=react
+```
+也可以指定组件创建位置
+``` shell
+$ emp addpage Home --type=react --dest=src/components
+```
